@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Likes = () => {
+const Social = () => {
   return (
     <div>
       <a
@@ -31,4 +31,4 @@ const Likes = () => {
   );
 };
 
-export default Likes;
+export default Social;

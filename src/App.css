@@ -24,14 +24,17 @@ body {
   height: 100vh; */
   justify-content: center;
   align-items: center;
+  /* flex-direction: column; */
   text-align: center;
   position: relative;
 }
 
 .App {
-  width: 560px;
-  height: 650px;
-  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 600px;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
   text-align: center;
   display: flex;
   align-items: center;
@@ -43,7 +46,7 @@ body {
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   background-color: var(--bg);
-  margin: 400px auto;
+  margin: 150px auto;
 }
 
 /* Header */
@@ -69,12 +72,14 @@ body {
   font-weight: var(--bold);
   font-size: 40px;
   margin-bottom: 15px;
+  color: #fff;
 }
 
 /* My Info */
 .whoami {
   font-size: 25px;
   font-weight: var(--med);
+  color: #fff;
 }
 
 /* Buttons */
@@ -97,6 +102,7 @@ body {
   padding: 7px 25px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #810e05;
+  text-transform: uppercase;
 }
 .btns button:hover {
   background: linear-gradient(to bottom, #f24437 5%, #a1514a 100%);
@@ -145,29 +151,55 @@ body {
 
 /*  Media Queries */
 
-/*  max screen */
-@media screen and (max-width: 600px) {
+/*  max screen 600px */
+@media screen and (min-width: 600px) {
   body {
     max-width: 100%;
   }
   .App {
     max-width: 100%;
-    height: auto;
+    height: 500px;
   }
 
   .prof-img {
     max-width: 150px;
-    max-height: 150px;
+  }
+
+  .btns {
+    padding: 0;
   }
 
   .btns button {
-    font-size: 12px;
-    width: 43px;
-    margin: 8px;
+    font-size: 15px;
+    width: 75px;
+    padding: 5px;
+    margin: 15px;
   }
 
   .hello {
     font-size: 25px;
     margin-bottom: 10px;
+  }
+
+  .fab {
+    font-size: 32px;
+  }
+}
+
+/*  max screen 450px */
+@media screen and (max-width: 450px) {
+  .app-body {
+    margin: 5px;
+  }
+
+  .btn {
+    margin: 3px;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
   }
 }
